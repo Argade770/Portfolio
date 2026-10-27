@@ -1,0 +1,1504 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#08111f;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* ===========================
+   CUSTOM SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#08111f;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00c6ff;
+    border-radius:50px;
+}
+
+/* ===========================
+   LOADER
+=========================== */
+
+.loader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#08111f;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.loader h1{
+    color:#00c6ff;
+    font-size:40px;
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+
+0%{
+opacity:1;
+}
+
+50%{
+opacity:.3;
+}
+
+100%{
+opacity:1;
+}
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+
+position:fixed;
+
+width:100%;
+
+padding:20px 10%;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(20px);
+
+display:flex;
+
+justify-content:center;
+
+z-index:1000;
+
+}
+
+nav{
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+font-size:32px;
+
+font-weight:700;
+
+color:#00c6ff;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:40px;
+
+}
+
+nav ul li a{
+
+font-size:18px;
+
+transition:.4s;
+
+}
+
+nav ul li a:hover{
+
+color:#00c6ff;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:120px 10%;
+
+}
+
+.left{
+
+width:55%;
+
+}
+
+.left h3{
+
+font-size:30px;
+
+margin-bottom:10px;
+
+}
+
+.left h1{
+
+font-size:65px;
+
+margin-bottom:20px;
+
+}
+
+.left h2{
+
+font-size:35px;
+
+color:#00c6ff;
+
+margin-bottom:20px;
+
+}
+
+.left p{
+
+line-height:32px;
+
+font-size:20px;
+
+margin-bottom:30px;
+
+}
+
+.right{
+
+width:35%;
+
+}
+
+.right img{
+
+border-radius:50%;
+
+border:6px solid #00c6ff;
+
+box-shadow:0 0 40px #00c6ff;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+BUTTONS
+=========================== */
+
+.btn{
+
+padding:15px 35px;
+
+border:none;
+
+background:#00c6ff;
+
+color:white;
+
+border-radius:40px;
+
+font-size:18px;
+
+cursor:pointer;
+
+margin-right:20px;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 0 25px #00c6ff;
+
+}
+
+.btn2{
+
+padding:15px 35px;
+
+background:transparent;
+
+border:2px solid #00c6ff;
+
+color:white;
+
+border-radius:40px;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+.btn2:hover{
+
+background:#00c6ff;
+
+}
+
+/* ===========================
+HEADINGS
+=========================== */
+
+.heading{
+
+text-align:center;
+
+font-size:45px;
+
+margin-bottom:60px;
+
+color:#00c6ff;
+
+}
+
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+#about{
+    padding:100px 10%;
+}
+
+.about-box{
+    max-width:900px;
+    margin:auto;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    transition:.5s;
+}
+
+.about-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,198,255,.4);
+}
+
+.about-box p{
+    font-size:20px;
+    line-height:35px;
+    color:#ddd;
+}
+
+/* ==========================================
+   PROJECTS
+========================================== */
+
+#projects{
+    padding:100px 10%;
+}
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(20px);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 0 35px rgba(0,198,255,.5);
+}
+
+.card i{
+    font-size:60px;
+    color:#00c6ff;
+    margin-bottom:20px;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#ccc;
+    line-height:28px;
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+#contact{
+    padding:100px 10%;
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+form input,
+form textarea{
+
+    width:100%;
+    padding:18px;
+    margin-bottom:20px;
+    border:none;
+    outline:none;
+    background:#131d2d;
+    color:white;
+    border-radius:10px;
+    font-size:17px;
+
+}
+
+form textarea{
+
+    resize:none;
+    height:180px;
+
+}
+
+form button{
+
+    width:100%;
+    padding:18px;
+    background:#00c6ff;
+    border:none;
+    color:white;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.4s;
+
+}
+
+form button:hover{
+
+    background:#008cff;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    padding:30px;
+    text-align:center;
+    background:#050c18;
+    color:#aaa;
+    margin-top:50px;
+
+}
+
+/* ==========================================
+   SCROLL TO TOP BUTTON
+========================================== */
+
+#topBtn{
+
+    position:fixed;
+    bottom:30px;
+    right:30px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#00c6ff;
+    color:white;
+
+    font-size:22px;
+    cursor:pointer;
+
+    display:none;
+
+    transition:.4s;
+
+}
+
+#topBtn:hover{
+
+    transform:scale(1.15);
+
+    box-shadow:0 0 25px #00c6ff;
+
+}
+/* ==========================================
+   HERO BACKGROUND EFFECT
+========================================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#00c6ff;
+    filter:blur(180px);
+    top:-150px;
+    left:-150px;
+    opacity:.18;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#8a2be2;
+    filter:blur(180px);
+    bottom:-150px;
+    right:-150px;
+    opacity:.18;
+    z-index:-2;
+}
+
+/* ==========================================
+   SECTION SPACING
+========================================== */
+
+section{
+    position:relative;
+    z-index:1;
+}
+
+/* ==========================================
+   CARD GLOW EFFECT
+========================================== */
+
+.about-box,
+.card,
+form,
+.skill-container{
+
+    transition:.4s;
+
+}
+
+.about-box:hover,
+.card:hover,
+form:hover{
+
+    border:1px solid #00c6ff;
+
+}
+
+/* ==========================================
+   LOGO ANIMATION
+========================================== */
+
+.logo{
+
+    animation:logoGlow 2s infinite alternate;
+
+}
+
+@keyframes logoGlow{
+
+from{
+
+text-shadow:0 0 10px #00c6ff;
+
+}
+
+to{
+
+text-shadow:
+0 0 20px #00c6ff,
+0 0 40px #00c6ff;
+
+}
+
+}
+
+/* ==========================================
+   HEADING ANIMATION
+========================================== */
+
+.heading{
+
+animation:headingGlow 2s infinite alternate;
+
+}
+
+@keyframes headingGlow{
+
+from{
+
+text-shadow:0 0 10px #00c6ff;
+
+}
+
+to{
+
+text-shadow:
+0 0 20px #00c6ff,
+0 0 40px #00c6ff;
+
+}
+
+}
+
+/* ==========================================
+   PROJECT CARD ICON ANIMATION
+========================================== */
+
+.card i{
+
+transition:.4s;
+
+}
+
+.card:hover i{
+
+transform:rotate(360deg) scale(1.2);
+
+}
+
+/* ==========================================
+   BUTTON RIPPLE EFFECT
+========================================== */
+
+.btn,
+.btn2{
+
+overflow:hidden;
+position:relative;
+
+}
+
+.btn::before,
+.btn2::before{
+
+content:"";
+
+position:absolute;
+
+width:0;
+height:100%;
+
+left:0;
+top:0;
+
+background:rgba(255,255,255,.15);
+
+transition:.5s;
+
+}
+
+.btn:hover::before,
+.btn2:hover::before{
+
+width:100%;
+
+}
+
+/* ==========================================
+   NAVBAR UNDERLINE
+========================================== */
+
+nav ul li a{
+
+position:relative;
+
+}
+
+nav ul li a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0;
+
+height:2px;
+
+background:#00c6ff;
+
+transition:.4s;
+
+}
+
+nav ul li a:hover::after{
+
+width:100%;
+
+}
+
+/* ==========================================
+   IMAGE HOVER
+========================================== */
+
+.right img:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 30px #00c6ff,
+0 0 60px #00c6ff;
+
+}
+
+/* ==========================================
+   CONTACT INPUT EFFECT
+========================================== */
+
+form input:focus,
+form textarea:focus{
+
+border:1px solid #00c6ff;
+
+box-shadow:0 0 15px rgba(0,198,255,.4);
+
+}
+
+/* ==========================================
+   FADE ANIMATION
+========================================== */
+
+.fade{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.fade.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ==========================================
+   FLOATING ANIMATION
+========================================== */
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+.card{
+
+animation:floating 6s ease-in-out infinite;
+
+}
+
+/* ==========================================
+   TEXT SELECTION
+========================================== */
+
+::selection{
+
+background:#00c6ff;
+color:#fff;
+
+}
+/*==========================
+THEME BUTTON
+==========================*/
+
+#themeBtn{
+
+position:fixed;
+
+right:25px;
+
+top:25px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#00c6ff;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+z-index:999;
+
+transition:.4s;
+
+}
+
+#themeBtn:hover{
+
+transform:rotate(180deg);
+
+}
+
+/*==========================
+STATS
+==========================*/
+
+#stats{
+
+padding:100px 10%;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.stat-box{
+
+padding:40px;
+
+background:rgba(255,255,255,.05);
+
+text-align:center;
+
+border-radius:20px;
+
+transition:.4s;
+
+}
+
+.stat-box:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 30px #00c6ff;
+
+}
+
+.stat-box h1{
+
+font-size:55px;
+
+color:#00c6ff;
+
+margin-bottom:15px;
+
+}
+
+.stat-box h3{
+
+font-size:22px;
+
+}
+
+/*==========================
+LIGHT MODE
+==========================*/
+
+.light{
+
+background:#ffffff;
+
+color:#111;
+
+}
+
+.light header{
+
+background:white;
+
+}
+
+.light .card,
+
+.light .about-box,
+
+.light .timeline-box,
+
+.light .certificate-card,
+
+.light .stat-box{
+
+background:#f2f2f2;
+
+color:#111;
+
+}
+
+.light footer{
+
+background:#ddd;
+
+color:#000;
+
+}
+/*=============================
+Animated Background
+==============================*/
+
+.background{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+top:0;
+
+left:0;
+
+overflow:hidden;
+
+z-index:-10;
+
+}
+
+.background span{
+
+position:absolute;
+
+display:block;
+
+width:25px;
+
+height:25px;
+
+background:#00c6ff;
+
+border-radius:50%;
+
+animation:animate 25s linear infinite;
+
+opacity:.15;
+
+}
+
+.background span:nth-child(1){
+
+left:5%;
+
+width:80px;
+
+height:80px;
+
+animation-duration:22s;
+
+}
+
+.background span:nth-child(2){
+
+left:20%;
+
+animation-duration:15s;
+
+}
+
+.background span:nth-child(3){
+
+left:35%;
+
+width:60px;
+
+height:60px;
+
+animation-duration:18s;
+
+}
+
+.background span:nth-child(4){
+
+left:50%;
+
+width:120px;
+
+height:120px;
+
+animation-duration:30s;
+
+}
+
+.background span:nth-child(5){
+
+left:65%;
+
+animation-duration:17s;
+
+}
+
+.background span:nth-child(6){
+
+left:80%;
+
+width:90px;
+
+height:90px;
+
+animation-duration:25s;
+
+}
+
+.background span:nth-child(7){
+
+left:92%;
+
+animation-duration:20s;
+
+}
+
+.background span:nth-child(8){
+
+left:75%;
+
+width:45px;
+
+height:45px;
+
+animation-duration:16s;
+
+}
+
+@keyframes animate{
+
+0%{
+
+transform:translateY(100vh) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(-120vh) rotate(720deg);
+
+}
+
+}
+/*=====================
+Cursor
+======================*/
+
+#cursor{
+
+width:25px;
+
+height:25px;
+
+background:#00c6ff;
+
+position:fixed;
+
+border-radius:50%;
+
+pointer-events:none;
+
+filter:blur(5px);
+
+z-index:99999;
+
+transition:.08s;
+
+}
+
+.whatsapp{
+
+position:fixed;
+
+bottom:100px;
+
+right:25px;
+
+width:60px;
+
+height:60px;
+
+background:#25D366;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+font-size:32px;
+
+color:white;
+
+box-shadow:0 0 20px #25D366;
+
+animation:jump 2s infinite;
+
+z-index:999;
+
+}
+
+@keyframes jump{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+/*=========================================
+ PREMIUM PROJECT CARD
+=========================================*/
+
+.project-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+gap:35px;
+
+}
+
+.project-card{
+
+background:#111827;
+
+border-radius:20px;
+
+overflow:hidden;
+
+transition:.5s;
+
+position:relative;
+
+box-shadow:0 0 20px rgba(0,0,0,.3);
+
+}
+
+.project-card:hover{
+
+transform:translateY(-15px);
+
+box-shadow:
+
+0 0 20px cyan,
+
+0 0 40px cyan;
+
+}
+
+.project-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.project-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.project-content{
+
+padding:25px;
+
+}
+
+.project-content h2{
+
+margin-bottom:15px;
+
+color:#00c6ff;
+
+}
+
+.project-content p{
+
+line-height:28px;
+
+margin-bottom:20px;
+
+color:#ccc;
+
+}
+
+.project-btn{
+
+display:inline-block;
+
+padding:12px 25px;
+
+background:#00c6ff;
+
+border-radius:30px;
+
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+.project-btn:hover{
+
+background:white;
+
+color:#111;
+
+}
+.project-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.15),
+
+transparent
+
+);
+
+transition:.8s;
+
+}
+
+.project-card:hover::before{
+
+left:100%;
+
+}
+/*=========================================
+SERVICES
+=========================================*/
+
+#services{
+
+padding:100px 10%;
+
+}
+
+.services-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.service-card{
+
+background:rgba(255,255,255,.05);
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+transition:.5s;
+
+}
+
+.service-card:hover{
+
+transform:translateY(-15px);
+
+box-shadow:0 0 30px cyan;
+
+}
+
+.service-card i{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+color:#00c6ff;
+
+}
+
+.service-card h2{
+
+margin-bottom:15px;
+
+}
+
+/*=========================================
+SOCIAL
+=========================================*/
+
+.social{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+margin:50px 0;
+
+}
+
+.social a{
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#111827;
+
+font-size:28px;
+
+transition:.4s;
+
+}
+
+.social a:hover{
+
+background:#00c6ff;
+
+transform:translateY(-10px);
+
+}
+
+.social i{
+
+color:white;
+
+}
+@media(max-width:992px){
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.left{
+
+width:100%;
+
+margin-bottom:40px;
+
+}
+
+.right{
+
+width:80%;
+
+}
+
+nav ul{
+
+gap:18px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.left h1{
+
+font-size:42px;
+
+}
+
+.left h2{
+
+font-size:28px;
+
+}
+
+.heading{
+
+font-size:36px;
+
+}
+
+.btn,
+.btn2{
+
+display:block;
+
+margin:15px auto;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.right{
+
+width:100%;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.left h1{
+
+font-size:34px;
+
+}
+
+.left p{
+
+font-size:16px;
+
+}
+
+}
