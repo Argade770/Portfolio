@@ -2,33 +2,31 @@
 <html lang="en">
 
 <head>
-<link rel="icon" href="./Screenshot 2026-08-06 093257.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Prem Argade| Portfolio</title>
+    <title>Prem Argade | Portfolio</title>
 
-    <!-- CSS -->
+    <!-- Favicon -->
+    <link rel="icon" href="./Screenshot 2026-08-06 093257.jpg">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./port.css">
 
-    <!-- Google Font -->
-
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <link rel="stylesheet" href="C:\JavaScript\Test\port.js">
-
-    <link rel="stylesheet" href="C:\JavaScript\Test\css.css">
+<!-- Font Awesome -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    referrerpolicy="no-referrer"
+/>
 <style>
     *{
     margin:0;
@@ -744,25 +742,6 @@ form button:hover{
 
     background:#008cff;
 
-}
-#heading{
-animation: headingGlow 2s infinite alternate;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-name: headingGlow;
-    animation-timeline: auto;
-    animation-range-start: normal;
-    animation-range-end: normal;
-        text-align: center;
-    font-size: 45px;
-    margin-bottom: 60px;
-    color: #00c6ff;
-    margin-left: 400px;
 }
 
 /* =========================
@@ -1956,361 +1935,418 @@ font-size:16px;
 }
 
 }
+
+
+
+
+/* =====================================
+   RESPONSIVE PORTFOLIO WEBSITE
+===================================== */
+
+
+
+
+
+
+/* =================================
+   RESPONSIVE NAVBAR FIX
+================================= */
+
+header {
+    width: 100%;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: clamp(20px, 3vw, 32px);
+    white-space: nowrap;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+}
+
+nav ul li a {
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 4%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        gap: 10px 16px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    header {
+        padding: 12px 3%;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 23px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    nav ul {
+        gap: 10px 14px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+}
+
+/* Prevent horizontal scrolling */
+
+
+/* Large laptops and desktops */
+@media (min-width: 1200px) {
+    .hero {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #about,
+    #projects,
+    #contact,
+    #services {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+/* Tablets and small laptops */
+@media (max-width: 992px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 130px 6% 70px;
+        gap: 30px;
+    }
+
+    .left {
+        width: 55%;
+    }
+
+    .left h1 {
+        font-size: clamp(35px, 5vw, 50px);
+    }
+
+    .left h2 {
+        font-size: clamp(23px, 3vw, 30px);
+    }
+
+    .left p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .right {
+        width: 40%;
+    }
+
+    #about,
+    #projects,
+    #contact,
+    #services {
+        padding: 80px 6%;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 4%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    nav ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: auto;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        padding: 160px 6% 70px;
+        gap: 35px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .right img {
+        width: min(75%, 300px);
+        margin: auto;
+    }
+
+    .left h3 {
+        font-size: 23px;
+    }
+
+    .left h1 {
+        font-size: clamp(30px, 8vw, 42px);
+        overflow-wrap: anywhere;
+    }
+
+    .left h2 {
+        font-size: clamp(22px, 6vw, 28px);
+    }
+
+    .left p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .heading {
+        font-size: 32px;
+        margin-bottom: 35px;
+    }
+
+    .btn,
+    .btn2 {
+        display: inline-block;
+        max-width: 100%;
+        margin: 10px 5px;
+        padding: 12px 22px;
+        font-size: 15px;
+    }
+
+    #about,
+    #projects,
+    #contact,
+    #services {
+        padding: 65px 5%;
+    }
+
+    .about-box {
+        padding: 25px 18px;
+    }
+
+    .about-box p {
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .project-container,
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .card,
+    .service-card {
+        padding: 25px 20px;
+    }
+
+    .project-card img {
+        height: 200px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    form input,
+    form textarea {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    #stats {
+        padding: 60px 5%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .stat-box {
+        padding: 25px 12px;
+    }
+
+    .stat-box h1 {
+        font-size: 35px;
+    }
+
+    .stat-box h3 {
+        font-size: 16px;
+    }
+
+    #themeBtn {
+        width: 42px;
+        height: 42px;
+        top: 12px;
+        right: 12px;
+        font-size: 18px;
+    }
+
+    #topBtn {
+        width: 45px;
+        height: 45px;
+        right: 15px;
+        bottom: 20px;
+    }
+
+    .whatsapp {
+        width: 48px;
+        height: 48px;
+        right: 15px;
+        bottom: 80px;
+        font-size: 26px;
+    }
+
+    footer {
+        padding: 25px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    nav ul {
+        gap: 10px 14px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-top: 175px;
+    }
+
+    .right img {
+        width: min(70%, 240px);
+    }
+
+    .left h1 {
+        font-size: 32px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .project-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-content h2 {
+        font-size: 21px;
+    }
+
+    #stats {
+        grid-template-columns: 1fr;
+    }
+
+    .social {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .social a {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+}
+
+/* Accessibility: reduce animations if requested */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
 </style>
-<script>
-    
-window.addEventListener("load", () => {
-
-    const loader = document.querySelector(".loader");
-
-    setTimeout(() => {
-
-        loader.style.opacity = "0";
-
-        loader.style.visibility = "hidden";
-
-    }, 1500);
-
-});
-
-
-/* ======================================
-   TYPING EFFECT
-====================================== */
-
-const typing = document.getElementById("typing");
-
-const words = [
-
-    "Python Full Stack Developer",
-    "Future AI Engineer",
-    "JavaScript Developer",
-    "Web Designer"
-
-];
-
-let wordIndex = 0;
-let charIndex = 0;
-let deleting = false;
-
-function typeEffect(){
-
-    const currentWord = words[wordIndex];
-
-    if(!deleting){
-
-        typing.textContent = currentWord.substring(0,charIndex);
-
-        charIndex++;
-
-        if(charIndex > currentWord.length){
-
-            deleting = true;
-
-            setTimeout(typeEffect,1200);
-
-            return;
-        }
-
-    }
-
-    else{
-
-        typing.textContent = currentWord.substring(0,charIndex);
-
-        charIndex--;
-
-        if(charIndex < 0){
-
-            deleting = false;
-
-            wordIndex++;
-
-            if(wordIndex == words.length){
-
-                wordIndex = 0;
-            }
-
-        }
-
-    }
-
-    setTimeout(typeEffect,deleting ? 50 : 120);
-
-}
-
-typeEffect();
-
-
-/* ======================================
-   SCROLL TO TOP
-====================================== */
-
-const topBtn = document.getElementById("topBtn");
-
-window.addEventListener("scroll",()=>{
-
-    if(window.scrollY > 300){
-
-        topBtn.style.display="block";
-
-    }
-
-    else{
-
-        topBtn.style.display="none";
-
-    }
-
-});
-
-topBtn.onclick=function(){
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-};
-
-
-/* ======================================
-   SCROLL REVEAL
-====================================== */
-
-const revealElements=document.querySelectorAll(
-
-"#about,#skills,#projects,#contact,.card,.skill,.about-box"
-
-);
-
-window.addEventListener("scroll",reveal);
-
-function reveal(){
-
-    revealElements.forEach((item)=>{
-
-        const windowHeight=window.innerHeight;
-
-        const top=item.getBoundingClientRect().top;
-
-        const visible=100;
-
-        if(top < windowHeight-visible){
-
-            item.classList.add("show");
-
-            item.classList.add("fade");
-
-        }
-
-    });
-
-}
-
-reveal();
-
-
-/* ======================================
-   ACTIVE NAVBAR
-====================================== */
-
-const sections=document.querySelectorAll("section");
-
-const navLinks=document.querySelectorAll("nav ul li a");
-
-window.addEventListener("scroll",()=>{
-
-    let current="";
-
-    sections.forEach(section=>{
-
-        const sectionTop=section.offsetTop-200;
-
-        if(scrollY>=sectionTop){
-
-            current=section.getAttribute("id");
-
-        }
-
-    });
-
-    navLinks.forEach(link=>{
-
-        link.classList.remove("active");
-
-        if(link.getAttribute("href")=="#"+current){
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
-
-
-/* ======================================
-   BUTTON RIPPLE
-====================================== */
-
-const buttons=document.querySelectorAll(".btn,.btn2");
-
-buttons.forEach(button=>{
-
-button.addEventListener("click",function(e){
-
-let x=e.clientX-button.offsetLeft;
-
-let y=e.clientY-button.offsetTop;
-
-let ripple=document.createElement("span");
-
-ripple.style.left=x+"px";
-
-ripple.style.top=y+"px";
-
-ripple.classList.add("ripple");
-
-button.appendChild(ripple);
-
-setTimeout(()=>{
-
-ripple.remove();
-
-},600);
-
-});
-
-});
-
-
-/* ======================================
-   CONSOLE MESSAGE
-====================================== */
-
-console.log("Welcome To Paras Portfolio 🚀");
-
-/* =======================
-Counter Animation
-======================= */
-
-const cards=document.querySelectorAll(".card");
-
-cards.forEach((card,index)=>{
-
-card.style.animationDelay=index*0.2+"s";
-
-});
-
-/* =======================
-Image Rotation
-======================= */
-
-const profile=document.querySelector(".right img");
-
-profile.addEventListener("mouseenter",()=>{
-
-profile.style.transform="rotate(5deg) scale(1.05)";
-
-});
-
-profile.addEventListener("mouseleave",()=>{
-
-profile.style.transform="rotate(0deg)";
-
-});
-/*==========================
-THEME TOGGLE
-==========================*/
-
-const themeBtn=document.getElementById("themeBtn");
-
-themeBtn.onclick=()=>{
-
-document.body.classList.toggle("light");
-
-if(document.body.classList.contains("light")){
-
-themeBtn.innerHTML='<i class="fa-solid fa-sun"></i>';
-
-}
-
-else{
-
-themeBtn.innerHTML='<i class="fa-solid fa-moon"></i>';
-
-}
-
-}
-
-/*==========================
-COUNTER
-==========================*/
-
-const counters=document.querySelectorAll(".counter");
-
-counters.forEach(counter=>{
-
-counter.innerText="0";
-
-const update=()=>{
-
-const target=+counter.getAttribute("data-target");
-
-const c=+counter.innerText;
-
-const increment=target/80;
-
-if(c<target){
-
-counter.innerText=`${Math.ceil(c+increment)}`;
-
-setTimeout(update,30);
-
-}
-
-else{
-
-counter.innerText=target;
-
-}
-
-}
-
-update();
-
-});
-const cursor=document.getElementById("cursor");
-
-document.addEventListener("mousemove",(e)=>{
-
-cursor.style.left=e.clientX+"px";
-
-cursor.style.top=e.clientY+"px";
-
-});
-const projectCards=document.querySelectorAll(".project-card");
-
-projectCards.forEach(card=>{
-
-card.addEventListener("mouseenter",()=>{
-
-card.style.transform="translateY(-15px) rotateX(5deg)";
-
-});
-
-card.addEventListener("mouseleave",()=>{
-
-card.style.transform="translateY(0) rotateX(0deg)";
-
-});
-
-});
-</script>
 </head>
 
 <body>
@@ -2580,23 +2616,26 @@ My goal is to become a Full Stack Developer and build modern, user-friendly web 
                 </a>
             
                 </div>
+                </div>
+
+                <!--contact informeshen  -->
                 <div id="contact">
                 <div class="form">
-        <h1 id="heading">
+        <h1 class="heading">
 
-            Contact
+        Csontact
 
         </h1>
 
         <form>
 
-            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your Name" id="name">
 
-            <input type="email" placeholder="Your Email">
+            <input type="email" placeholder="Your Email" id="email">
 
             <textarea placeholder="Message"></textarea>
 
-            <button>
+            <button onclick="form()">
 
                 Send
 
@@ -2634,9 +2673,9 @@ My goal is to become a Full Stack Developer and build modern, user-friendly web 
 
             <h3>2023 – 2026</h3>
 
-            <div class="result">
+            <!-- <div class="result">
                 CGPA: 7.61
-            </div>
+            </div> -->
 
         </div>
 
@@ -2649,9 +2688,9 @@ My goal is to become a Full Stack Developer and build modern, user-friendly web 
 
             <p>HSC (12th)</p>
 
-            <div class="result">
+            <!-- <div class="result">
                 Percentage: 41.83%
-            </div>
+            </div> -->
 
         </div>
 
@@ -2664,9 +2703,9 @@ My goal is to become a Full Stack Developer and build modern, user-friendly web 
 
             <p>SSC (10th)</p>
 
-            <div class="result">
+            <!-- <div class="result">
                 Percentage: 60.20%
-            </div>
+            </div> -->
 
         </div>
 
@@ -2688,13 +2727,13 @@ My goal is to become a Full Stack Developer and build modern, user-friendly web 
 
     <!-- JS -->
 
-    <script src="js/script.js"></script>
+    
 
     <section id="stats">
 
     <div class="stat-box">
 
-        <h1 class="counter" data-target="20">2</h1>
+        <h1 class="counter" data-target="2">2</h1>
 
         <h3>Projects</h3>
 
@@ -2702,7 +2741,7 @@ My goal is to become a Full Stack Developer and build modern, user-friendly web 
 
     <div class="stat-box">
 
-        <h1 class="counter" data-target="15">7</h1>
+        <h1 class="counter" data-target="7">7</h1>
 
         <h3>Skills</h3>
 
@@ -2710,7 +2749,7 @@ My goal is to become a Full Stack Developer and build modern, user-friendly web 
 
     <div class="stat-box">
 
-        <h1 class="counter" data-target="100">80</h1>
+        <h1 class="counter" data-target="85">80</h1>
 
         <h3>Learning %</h3>
 
@@ -2793,7 +2832,7 @@ SERVICES
         © 2026 Prem Argade
 
     </footer>
-
+ <script src="./port.js"></script>
 </body>
 
 </html>
